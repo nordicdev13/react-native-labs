@@ -1,0 +1,21 @@
+{
+  "name": "campus-events",
+  "version": "1.0.0",
+  "description": "Campus Events — система керування університетськими подіями (Лабораторна робота №2)",
+  "private": true,
+  "scripts": {
+    "start:js": "node src-js/index.js",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "start:ts": "node dist/index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.5.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.0",
+    "jest": "^30.5.0",
+    "ts-jest": "^29.4.12",
+    "typescript": "^6.0.3"
+  }
+}
