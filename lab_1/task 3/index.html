@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events — Відкрита лекція</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Campus Events</h1>
+    </header>
+
+    <main>
+        <!-- Стандартна картка події -->
+        <article class="event-card">
+            <header class="event-header">
+                <h2>Відкрита лекція: Мобільний UX</h2>
+                <div class="event-meta">
+                    <p class="meta-item">
+                        <strong>Час:</strong>
+                        <time datetime="2026-10-15T15:00">15 жовтня 2026, 15:00</time>
+                    </p>
+                    <p class="meta-item">
+                        <strong>Місце:</strong>
+                        <span>Аудиторія 101, Головний корпус</span>
+                    </p>
+                </div>
+            </header>
+
+            <div class="event-body">
+                <p class="event-description">
+                    Практичний інтенсив про проєктування зручних мобільних інтерфейсів, доступність та патерни взаємодії в сучасних iOS та Android застосунках.
+                </p>
+
+                <h3 class="theses-title">Основні тези лекції:</h3>
+                <ul class="theses-list">
+                    <li>Принципи Mobile-First дизайну та адаптивного компонування</li>
+                    <li>Доступність: робота з контрастом, розмірами кнопок та фокусом</li>
+                    <li>Патерни навігації та оптимізація взаємодії з користувачем</li>
+                </ul>
+            </div>
+
+            <footer class="event-footer">
+                <button type="button" class="register-btn">Зареєструватися</button>
+            </footer>
+        </article>
+
+        <!-- Варіант картки з модифікатором event-card--featured -->
+        <article class="event-card event-card--featured">
+            <header class="event-header">
+                <div class="featured-badge">Рекомендована подія</div>
+                <h2>Воркшоп: Доступність веб-інтерфейсів</h2>
+                <div class="event-meta">
+                    <p class="meta-item">
+                        <strong>Час:</strong>
+                        <time datetime="2026-10-22T16:30">22 жовтня 2026, 16:30</time>
+                    </p>
+                    <p class="meta-item">
+                        <strong>Місце:</strong>
+                        <span>Медіа-зал наукової бібліотеки</span>
+                    </p>
+                </div>
+            </header>
+
+            <div class="event-body">
+                <p class="event-description">
+                    Поглиблене занурення у стандарти WCAG, семантичну розмітку та тестування інтерфейсів за допомогою програм зчитування екрана (Screen Readers).
+                </p>
+
+                <h3 class="theses-title">Основні тези воркшопу:</h3>
+                <ul class="theses-list">
+                    <li>Семантичні HTML5-теги проти безструктурних контейнерів</li>
+                    <li>Клавіатурна навігація, керування фокусом та атрибути ARIA</li>
+                    <li>Практичне тестування доступності у браузерних інструментах</li>
+                </ul>
+            </div>
+
+            <footer class="event-footer">
+                <button type="button" class="register-btn">Зареєструватися</button>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>

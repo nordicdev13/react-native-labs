@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №1 — HTML і CSS для інтерфейсів</title>
+    <style>
+        :root {
+            --primary: #1455c0;
+            --primary-hover: #0d3b87;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 54rem;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .tasks-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .task-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .task-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-card h2 {
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .task-card p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .task-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: #eff6ff;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        @media (min-width: 48rem) {
+            body {
+                padding: 3rem 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Лабораторна робота №1</h1>
+            <p>HTML і CSS для інтерфейсів — доступність, семантика, змінні та адаптивність</p>
+        </header>
+
+        <main>
+            <div class="tasks-grid">
+                <!-- Task 1 -->
+                <section class="task-card">
+                    <h2>
+                        Завдання 1. Семантичний HTML-документ
+                        <span class="badge">Task 1</span>
+                    </h2>
+                    <p>Семантичний каркас сторінки «Campus Events» із тегами header, main, section, footer, ненумерованим списком подій та перевіреними метаданими.</p>
+                    <div class="task-links">
+                        <a class="btn" href="task 1/index.html">Відкрити Завдання 1</a>
+                    </div>
+                </section>
+
+                <!-- Task 2 -->
+                <section class="task-card">
+                    <h2>
+                        Завдання 2. CSS: селектори, змінні та фокус
+                        <span class="badge">Task 2</span>
+                    </h2>
+                    <p>Стилізація меню ресторану «Little Lemon»: CSS-змінні у :root, селектори елементів, класу, ID (#logo), нащадка (бейдж NEW) та фокус :focus-visible.</p>
+                    <div class="task-links">
+                        <a class="btn" href="task 2/index.html">Відкрити Завдання 2</a>
+                    </div>
+                </section>
+
+                <!-- Task 3 -->
+                <section class="task-card">
+                    <h2>
+                        Завдання 3. Адаптивна картка події
+                        <span class="badge">Task 3</span>
+                    </h2>
+                    <p>Картка «Відкрита лекція: Мобільний UX» та варіант event-card--featured: Flexbox, Mobile-First, тег time з datetime, доступна кнопка та prefers-reduced-motion.</p>
+                    <div class="task-links">
+                        <a class="btn" href="task 3/index.html">Відкрити Завдання 3</a>
+                    </div>
+                </section>
+
+                <!-- Демо-приклад -->
+                <section class="task-card">
+                    <h2>
+                        Демо-приклад
+                        <span class="badge">Demo</span>
+                    </h2>
+                    <p>Зразок сторінки планувальника навчання з семантичною розміткою та адаптивними стилями.</p>
+                    <div class="task-links">
+                        <a class="btn btn-outline" href="demo-приклад/index.html">Відкрити Демо-приклад</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 Лабораторна робота №1. Навчальний проєкт з розробки інтерфейсів.</p>
+        </footer>
+    </div>
+</body>
+</html>
